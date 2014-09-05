@@ -69,4 +69,3 @@ function application_autoloader($class) {
 spl_autoload_register('application_autoloader');
 
 $tmpl = new TemplateFunctions();
-$tmpl->setTemplate("plusbusiness");
