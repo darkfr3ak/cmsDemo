@@ -1,6 +1,6 @@
 cmsDemo
 =======
 
-This is an in some parts changed CMS written after the multi-part tutorial from [http://biglancers.com/blog/](http://biglancers.com/blog/ "Biglancers")
+This is an in some parts changed CMS written after the multi-part tutorial from [Biglancers](http://biglancers.com/blog/)
 
-It contains a free CSS Template from [http://www.os-templates.com/](http://www.os-templates.com/ "OS Templates")
+It contains a free CSS Template from [OS Templates](http://www.os-templates.com/)
