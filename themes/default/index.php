@@ -1,164 +1,139 @@
 <!DOCTYPE html>
-<!--
-Copyright (C) 2014 darkfr3ak <info at darkfr3ak.de>
-
-This program is free software; you can redistribute it and/or
-modify it under the terms of the GNU General Public License
-as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
--->
 <html>
     <head>
         <title><?php $this->widgetOutput('headerPosition'); ?></title>
-        <link type='text/css' rel='stylesheet' href='<?php echo $this->getCurrentTemplatePath(); ?>css/style.css' />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="imagetoolbar" content="no" />
+        <link rel="stylesheet" href="<?php echo $this->getCurrentTemplatePath(); ?>css/style.css" type="text/css" />
+        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery-1.4.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery.jcarousel.pack.js"></script>
+        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery.jcarousel.setup.js"></script>
     </head>
-    <body>
-        <div id="navi">
-            <ul>
-                <div id="left">
-                    <li><a href="./">Startseite</a></li>
-                    <li><a href="?s=register">Registration</a></li>
-                    <li><a href="?s=downloads">Downloads</a></li>
+    <body id="top">
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col1">
+            <div id="header">
+                <div id="logo">
+                    <h1><a href="#"><?php $this->widgetOutput('logoPosition'); ?></a></h1>
+                    <p>Free CSS Website Template</p>
                 </div>
-
-                <div id="right">
-                    <li><a href="?s=ranking_chars">Rangliste</a></li>
-                    <li><a href="./">Youtube</a></li>
-                    <li><a href="./forum" target="_blank">Community</a></li>
+                <div id="topnav">
+                    <ul>
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="style-demo.html">Style Demo</a></li>
+                        <li><a href="full-width.html">Full Width</a></li>
+                        <li><a href="#">DropDown</a>
+                            <ul>
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="last"><a href="#">A Long Link Text</a></li>
+                    </ul>
                 </div>
-            </ul>
+                <br class="clear" />
+            </div>
         </div>
-
-        <a href="./"><div id="header"></div></a>
-        <div id="container_top">	  </div>
-        <div id="container_mid">
-
-            <div id="sidebar-l">
-                <div class="sb-top">Userpanel</div>
-                <div class="sb-mid">
-                    <form id="userInfo" action="index.php?s=login" method="POST" style="text-align:center; margin-left:18px;">
-                        <input type="text" maxlength="16" size="10" name="userid" class="id" onFocus="if (this.value == 'Account-ID')
-                                    this.value = '';" onBlur="if (this.value == '')
-                                                this.value = 'Account-ID';" value="Account-ID">
-                        <input type="password" maxlength="16" size="10" name="userpass" class="pw" onFocus="if (this.value == 'Passwort')
-                                    this.value = '';" onBlur="if (this.value == '')
-                                                this.value = 'Passwort';" value="Passwort"><br/>
-                        <div class="login_btn">
-                            <input type="submit" value="Login" name="submit"> 
-                        </div><br>
-                        <div class="pw">
-                            <a href="index.php?s=lostpw">Passwort vergessen</a>
-                        </div>
-                    </form>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col2">
+            <div id="featured_slide">
+                <div id="featured_content">
+                    <ul>
+                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/1.gif" alt="" />
+                            <div class="floater">
+                                <h2>About This Template !</h2>
+                                <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                            </div>
+                        </li>
+                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/2.gif" alt="" />
+                            <div class="floater">
+                                <h2>Cursus penati saccum ut curabitur nulla.</h2>
+                                <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
+                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                            </div>
+                        </li>
+                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/3.gif" alt="" />
+                            <div class="floater">
+                                <h2>Cursus penati saccum ut curabitur nulla.</h2>
+                                <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
+                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-
-                <div class="sb-bot"></div>
-
-                </br>
-
-                <a href="?s=downloads" id="download"></a>
-                <a href="./forum" id="community"></a>
-
-                </br>
-
-                <div class="sb-top">Serverstatus</div>
-                <div class="sb-mid">
-                    <div id="sidebar_main_rank">
-                        <?php $this->widgetOutput('sidebarPosition'); ?>
-                    </div>
-                </div>
-
-                <div class="sb-bot"></div>
-
-                </br>
-
-                <div class="sb-top">Newsbox</div>
-                <div class="sb-mid">
-                    <div id="mid_text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren 
-                    </div>
-                </div>
-
-                <div class="sb-bot"></div>
-
-
-            </div>
-
-
-
-            <div id="sidebar-r">
-
-                <div class="sb-top">Top 5 Player</div>
-                <div class="sb-mid">
-                    <div id="sidebar_main_rank">
-                        <?php $this->widgetOutput('logoPosition'); ?>
-                    </div>
-                </div>
-                <div class="sb-bot">
-                    <a href="?s=ranking_chars" style="margin-left:43px;">» Komplette Rangliste</a>
-                </div>
-
-                </br>
-
-                <a href="?s=vote" id="vote"></a>
-                <a href="./ts3" id="ts3"></a>
-
-                </br>
-
-                <div class="sb-top">Trailer</div>
-                <div class="sb-mid">
-                    <div id="mid">
-                        <iframe width="190" height="200" src="//www.youtube.com/embed/CYwDJjsmQX4" frameborder="0" allowfullscreen></iframe> </div>
-                </div>
-
-                <div class="sb-bot"></div>
-
-                </br>
-
-                <div class="sb-top">Shortcuts</div>
-                <div class="sb-mid">
-                    <div id="mid_text">
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren </div>
-                </div>
-
-                <div class="sb-bot"></div>
-
-
-                <a href="http://vgm-designs.de" target="_blank"><div id="partner"></div></a>
-
-
-            </div>
-
-
-
-            <div id="content">
-                <?php echo $this->appOutput(); ?>
-                <br><br><br><br><br>
-            </div>
-
-            <div class="clear"></div>
-
+                <a href="javascript:void(0);" id="featured-item-prev"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/next.png" alt="" /></a> </div>
         </div>
-        <div id="container_bot">	  </div>
-
-        <br/>
-        <div id="footer">
-            Copyright © 2014 - Polaria  </br>
-            All rights reserved  </br>
-            Design & Code by <a href="http://www.elitepvpers.com/forum/trading/2671748-service-shop-vgm-designs-webdesigns-more.html" target="_blank">DarkBozZ</a>. </br>
-
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col3">
+            <div id="container">
+                <div class="homepage">
+                    <ul>
+                        <li>
+                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
+                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                        </li>
+                        <li>
+                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
+                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                        </li>
+                        <li class="last">
+                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
+                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
+                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+                        </li>
+                    </ul>
+                    <br class="clear" />
+                </div>
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col4">
+            <div id="footer">
+                <div class="box1">
+                    <h2>A Little Company Information !</h2>
+                    <img class="imgl" src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/imgl.gif" alt="" />
+                    <p><?php $this->widgetOutput('sidebarPosition'); ?></p>
+                </div>
+                <div class="box contactdetails">
+                    <h2>Our Contact Details !</h2>
+                    <ul>
+                        <li>Company Name</li>
+                        <li>Street Name &amp; Number</li>
+                        <li>Town</li>
+                        <li>Postcode/Zip</li>
+                        <li>Tel: xxxxx xxxxxxxxxx</li>
+                        <li>Fax: xxxxx xxxxxxxxxx</li>
+                        <li>Email: info@domain.com</li>
+                        <li class="last">LinkedIn: <a href="#">Company Profile</a></li>
+                    </ul>
+                </div>
+                <div class="box flickrbox">
+                    <h2>Latest Flickr Images !</h2>
+                    <div class="wrap">
+                        <div class="fix"></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image1"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image2"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image3"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image4"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image5"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="flickr_badge_image" id="flickr_badge_image6"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
+                        <div class="fix"></div>
+                    </div>
+                </div>
+                <br class="clear" />
+            </div>
+        </div>
+        <!-- ####################################################################################################### -->
+        <div class="wrapper col5">
+            <div id="copyright">
+                <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
+                <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+                <br class="clear" />
+            </div>
         </div>
     </body>
 </html>
