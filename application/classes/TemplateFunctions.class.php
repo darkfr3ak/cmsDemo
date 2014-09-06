@@ -33,7 +33,7 @@ class TemplateFunctions extends Base {
     }
 
     public function getCurrentTemplatePath() {
-        return 'themes/' . $this->templateName . '/';
+        return 'extensions/themes/' . $this->templateName . '/';
     }
 
     //this will set template which we want to use    

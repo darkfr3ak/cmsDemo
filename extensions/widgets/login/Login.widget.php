@@ -19,23 +19,21 @@
  */
 
 /**
- * Description of Core
+ * Description of Login
  *
  * @author darkfr3ak <info at darkfr3ak.de>
  */
-class CoreApplication extends Application {
+class LoginWidget extends Widget {
 
-    public function addcontent() {
-        echo '<img src="http://www.sounds2move.de/Interviews/saltatiomortis_logo_web.jpg" />';
-    }
-
-    public function display() {
-        echo 'here view content functionality will takes place';
-        echo $this->site_root;
-    }
-
-    public function anyothertask() {
-        echo 'this is another task here can be written a complete php program against that task';
+    function display() {
+        $world = ' Form here';
+        // if parameters array is not empty in other words parameters do exists then assign variable $world a value by that parameter
+        if (count($this->parameters) != 0) {
+            $input = $this->parameters['input_class'];
+            $button = $this->parameters['button_class'];
+        }
+        echo "Login " . $world;
+        //here you can write a complete php application code to be displayed as widget.
     }
 
 }

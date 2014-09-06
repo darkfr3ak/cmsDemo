@@ -24,7 +24,7 @@ header("Content-type:text/html; charset=utf-8");
 error_reporting(E_ALL ^ E_NOTICE);
 
 define("DS", DIRECTORY_SEPARATOR);
-define("SITE_ROOT", dirname(dirname(__FILE__)) . DS);
+define("SITE_ROOT", str_replace($DOCUMENT_ROOT, "", dirname($PHP_SELF)));
 
 function application_autoloader($class) {
     $class_filename = $class . '.class.php';
@@ -68,4 +68,17 @@ function application_autoloader($class) {
 
 spl_autoload_register('application_autoloader');
 
+HTTP::init();
+
+
+$pdoConfig = new stdClass();
+$pdoConfig->_database = isset($dbname) ? $dbname : 'm2';
+$pdoConfig->_server = isset($servername) ? $servername : 'localhost';
+$pdoConfig->_user = isset($dbusername) ? $dbusername : 'root';
+$pdoConfig->_password = isset($dbpassword) ? $dbpassword : 'root';
+$pdoConfig->_engine = 'mysql';
+$pdoConfig->_showErrors = true;
+
 $tmpl = new TemplateFunctions();
+$tmpl->config = $pdoConfig;
+$tmpl->setTemplate("silverenergy");

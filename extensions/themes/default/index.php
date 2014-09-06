@@ -19,9 +19,9 @@
                 </div>
                 <div id="topnav">
                     <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="style-demo.html">Style Demo</a></li>
-                        <li><a href="full-width.html">Full Width</a></li>
+                        <li class="active"><a href="index.php">Home</a></li>
+                        <li><a href="?task=addcontent">Style Demo</a></li>
+                        <li><a href="?task=anyothertask">Full Width</a></li>
                         <li><a href="#">DropDown</a>
                             <ul>
                                 <li><a href="#">Link 1</a></li>
@@ -69,6 +69,8 @@
         <div class="wrapper col3">
             <div id="container">
                 <div class="homepage">
+                    <?php echo $this->appOutput(); ?>
+                    <!--
                     <ul>
                         <li>
                             <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
@@ -86,6 +88,7 @@
                             <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
                         </li>
                     </ul>
+                    -->
                     <br class="clear" />
                 </div>
             </div>
