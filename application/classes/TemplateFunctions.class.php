@@ -78,4 +78,14 @@ class TemplateFunctions extends Base {
         }
     }
 
+    private function generateMenu() {
+        $menu = new Menu;
+
+        $menu->add('Home', 'index.php');
+        $menu->add('Portfolio', 'portfolio');
+        $menu->add('Contact', 'contact');
+
+        return $menu;
+    }
+
 }

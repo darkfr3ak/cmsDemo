@@ -68,17 +68,11 @@ function application_autoloader($class) {
 
 spl_autoload_register('application_autoloader');
 
+$config = new Config();
+$config->init();
 HTTP::init();
 
-
-$pdoConfig = new stdClass();
-$pdoConfig->_database = isset($dbname) ? $dbname : 'm2';
-$pdoConfig->_server = isset($servername) ? $servername : 'localhost';
-$pdoConfig->_user = isset($dbusername) ? $dbusername : 'root';
-$pdoConfig->_password = isset($dbpassword) ? $dbpassword : 'root';
-$pdoConfig->_engine = 'mysql';
-$pdoConfig->_showErrors = true;
-
 $tmpl = new TemplateFunctions();
-$tmpl->config = $pdoConfig;
 $tmpl->setTemplate("silverenergy");
+
+var_dump($tmpl->_dbh);

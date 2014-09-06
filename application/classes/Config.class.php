@@ -19,14 +19,25 @@
  */
 
 /**
- * Description of Login
+ * Description of Config
  *
  * @author darkfr3ak <info at darkfr3ak.de>
  */
-class LoginWidget extends Widget {
+class Config {
 
-    function display() {
-        var_dump($this->_dbh);
+    public $_dbh;
+
+    //put your code here
+    public function init() {
+        $pdoConfig = new stdClass();
+        $pdoConfig->_database = isset($dbname) ? $dbname : 'm2';
+        $pdoConfig->_server = isset($servername) ? $servername : 'localhost';
+        $pdoConfig->_user = isset($dbusername) ? $dbusername : 'root';
+        $pdoConfig->_password = isset($dbpassword) ? $dbpassword : 'root';
+        $pdoConfig->_engine = 'mysql';
+        $pdoConfig->_showErrors = true;
+
+        $this->_dbh = new Database($pdoConfig);
     }
 
 }
