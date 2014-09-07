@@ -26,7 +26,7 @@
 class LoginWidget extends Widget {
 
     function display() {
-        var_dump($this->_dbh);
+        
     }
 
 }

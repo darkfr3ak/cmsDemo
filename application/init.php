@@ -26,53 +26,37 @@ error_reporting(E_ALL ^ E_NOTICE);
 define("DS", DIRECTORY_SEPARATOR);
 define("SITE_ROOT", str_replace($DOCUMENT_ROOT, "", dirname($PHP_SELF)));
 
-function application_autoloader($class) {
-    $class_filename = $class . '.class.php';
-    $lib_filename = $class . '.lib.php';
-    $class_root = dirname(__FILE__);
-    $cache_file = "{$class_root}/cache/classpaths.cache";
-    $cache_folder = "{$class_root}/cache/";
-    $path_cache = (file_exists($cache_file)) ? unserialize(file_get_contents($cache_file)) : array();
+session_start();
 
-    if (!file_exists($cache_folder)) {
-        mkdir($cache_folder);
-    }
+$GLOBALS['config'] = array(
+    'mysql' => array(
+        'host' => '127.0.0.1',
+        'username' => 'root',
+        'password' => 'root',
+        'db' => 'reg'
+    ),
+    'remember' => array(
+        'cookie_name' => 'hash',
+        'cookie_expiry' => 1209600,
+    ),
+    'session' => array(
+        'session_name' => 'user',
+        'token_name' => 'token'
+    )
+);
+require_once('application/functions/Autoload.function.php');
+require_once('application/functions/Sanitize.function.php');
 
-    if (!is_array($path_cache)) {
-        $path_cache = array();
-    }
+if (Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Config::get('session/session_name'))) {
+    $hash = Cookie::get(Config::get('remember/cookie_name'));
+    $hashCheck = DB::getInstance()->get('users_session', array('hash', '=', $hash));
 
-    if (array_key_exists($class, $path_cache)) {
-        /* Load class using path from cache file (if the file still exists) */
-        if (file_exists($path_cache[$class])) {
-            require_once $path_cache[$class];
-        }
-    } else {
-        /* Determine the location of the file within the $class_root and, if found, load and cache it */
-        $directories = new RecursiveDirectoryIterator($class_root);
-        foreach (new RecursiveIteratorIterator($directories) as $file) {
-            if ($file->getFilename() == $class_filename || $file->getFilename() == $lib_filename) {
-                $full_path = $file->getRealPath();
-                $path_cache[$class] = $full_path;
-                require_once $full_path;
-                break;
-            }
-        }
-    }
-
-    $serialized_paths = serialize($path_cache);
-    if ($serialized_paths != $path_cache) {
-        file_put_contents($cache_file, serialize($path_cache));
+    if ($hashCheck->count()) {
+        $user = new User($hashCheck->first()->user_id);
+        $user->login();
     }
 }
-
-spl_autoload_register('application_autoloader');
-
-$config = new Config();
-$config->init();
 HTTP::init();
 
 $tmpl = new TemplateFunctions();
 $tmpl->setTemplate("silverenergy");
-
-var_dump($tmpl->_dbh);
