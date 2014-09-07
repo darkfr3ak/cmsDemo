@@ -80,10 +80,30 @@ class TemplateFunctions extends Base {
 
     private function generateMenu() {
         $menu = new Menu;
+        $user = new User();
 
-        $menu->add('Home', 'index.php');
-        $menu->add('Portfolio', 'portfolio');
-        $menu->add('Contact', 'contact');
+        if ($user->isLoggedIn()) {
+            $menu->add($user->data()->username, '#');
+            $menu->add('Home', 'index.php');
+            $about = $menu->add('Profile', 'profile.php');
+
+            $t = $about->add('Change Password', '#');
+            $about->add('Update Info', '');
+            $about->add('Logout', '?app=UserMGMT&task=logout');
+        } else {
+            $menu->add('Home', 'index.php');
+            //echo '<p>You need to <a href="?app=UserMGMT&task=login">log in</a> or <a href="?app=UserMGMT&task=register">register</a>.</p>';
+            $menu->add('Login', '?app=UserMGMT&task=login');
+            $menu->add('Register', '?app=UserMGMT&task=register');
+        }
+
+
+        $menu->filter(function($item) {
+            if ($item->meta('display') === false) {
+                return false;
+            }
+            return true;
+        });
 
         return $menu;
     }

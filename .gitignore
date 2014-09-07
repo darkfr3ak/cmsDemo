@@ -1,3 +1,5 @@
 nbproject/
 extensions/themes/polaria/
 extensions/themes/silverenergy/
+application/cache/
+init.php

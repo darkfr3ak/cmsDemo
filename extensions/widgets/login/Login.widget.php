@@ -1,5 +1,4 @@
 <?php
-
 /*
  * Copyright (C) 2014 darkfr3ak <info at darkfr3ak.de>
  *
@@ -26,7 +25,23 @@
 class LoginWidget extends Widget {
 
     function display() {
-        
+        $user = new User();
+        if ($user->isLoggedIn()) {
+            ?>
+            <p>Hello <a href="#"><?php echo escape($user->data()->username); ?></a>!</p>
+
+            <ul>
+                <li><a href="password.php">Change Password</a></li>
+                <li><a href="update.php">Update Info</a></li>
+                <li><a href="?app=UserMGMT&task=logout">Log Out</a></li>
+            </ul>
+            <?php
+            if ($user->hasPermission('admin')) {
+                echo 'Is Admin User.';
+            }
+        } else {
+            echo '<p>You need to <a href="?app=UserMGMT&task=login">log in</a> or <a href="?app=UserMGMT&task=register">register</a>.</p>';
+        }
     }
 
 }
