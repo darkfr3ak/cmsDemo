@@ -20,7 +20,7 @@ if ($user->isLoggedIn()) {
         echo 'Is Admin User.';
     }
 } else {
-    echo '<p>You need to <a href="login.php">log in</a> or <a href="register.php">register</a>.</p>';
+    echo '<p>You need to <a href="?task=showlogin">log in</a> or <a href="register.php">register</a>.</p>';
 }
 
 $tmpl->setWidget('headerPosition', 'Header');

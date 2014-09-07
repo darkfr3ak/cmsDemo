@@ -25,17 +25,9 @@
  */
 class CoreApplication extends Application {
 
-    public function addcontent() {
-        echo '<img src="http://www.sounds2move.de/Interviews/saltatiomortis_logo_web.jpg" />';
-    }
-
     public function display() {
         echo 'here view content functionality will takes place';
         echo $this->site_root;
-    }
-
-    public function anyothertask() {
-        echo 'this is another task here can be written a complete php program against that task';
     }
 
 }
