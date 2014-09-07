@@ -59,4 +59,3 @@ if (Cookie::exists(Config::get('remember/cookie_name')) && !Session::exists(Conf
 HTTP::init();
 
 $tmpl = new TemplateFunctions();
-$tmpl->setTemplate("silverenergy");

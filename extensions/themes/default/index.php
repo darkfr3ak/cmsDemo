@@ -2,141 +2,108 @@
 <html>
     <head>
         <title><?php $this->widgetOutput('headerPosition'); ?></title>
-        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-        <meta http-equiv="imagetoolbar" content="no" />
-        <link rel="stylesheet" href="<?php echo $this->getCurrentTemplatePath(); ?>css/style.css" type="text/css" />
-        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery-1.4.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery.jcarousel.pack.js"></script>
-        <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/jquery.jcarousel.setup.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <link href="<?php echo $this->getCurrentTemplatePath(); ?>css/style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body id="top">
-        <!-- ####################################################################################################### -->
-        <div class="wrapper col1">
-            <div id="header">
-                <div id="logo">
-                    <h1><a href="#"><?php $this->widgetOutput('logoPosition'); ?></a></h1>
-                    <p>Free CSS Website Template</p>
-                </div>
-                <div id="topnav">
-                    <ul>
-                        <li class="active"><a href="index.php">Home</a></li>
-                        <li><a href="?task=addcontent">Style Demo</a></li>
-                        <li><a href="?task=anyothertask">Full Width</a></li>
-                        <li><a href="#">DropDown</a>
-                            <ul>
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                                <li><a href="#">Link 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="last"><a href="#">A Long Link Text</a></li>
-                    </ul>
-                </div>
-                <br class="clear" />
-            </div>
-        </div>
-        <!-- ####################################################################################################### -->
-        <div class="wrapper col2">
-            <div id="featured_slide">
-                <div id="featured_content">
-                    <ul>
-                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/1.gif" alt="" />
-                            <div class="floater">
-                                <h2>About This Template !</h2>
-                                <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
-                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                            </div>
-                        </li>
-                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/2.gif" alt="" />
-                            <div class="floater">
-                                <h2>Cursus penati saccum ut curabitur nulla.</h2>
-                                <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
-                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                            </div>
-                        </li>
-                        <li><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/3.gif" alt="" />
-                            <div class="floater">
-                                <h2>Cursus penati saccum ut curabitur nulla.</h2>
-                                <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
-                                <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <a href="javascript:void(0);" id="featured-item-prev"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/prev.png" alt="" /></a> <a href="javascript:void(0);" id="featured-item-next"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/next.png" alt="" /></a> </div>
-        </div>
-        <!-- ####################################################################################################### -->
-        <div class="wrapper col3">
-            <div id="container">
-                <div class="homepage">
-                    <?php echo $this->appOutput(); ?>
-                    <!--
-                    <ul>
-                        <li>
-                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
-                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
-                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                        </li>
-                        <li>
-                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
-                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
-                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                        </li>
-                        <li class="last">
-                            <h2><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/60x60.gif" alt="" />Nullamlacus dui ipsum conseque loborttis</h2>
-                            <p>Nullamlacus dui ipsum conseque loborttis non euisque morbi penas dapibulum orna. Urnaultrices quis curabitur phasellentesque congue magnis vestibulum quismodo nulla et feugiat. Adipisciniapellentum leo ut consequam ris felit elit id nibh sociis malesuada.</p>
-                            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
-                        </li>
-                    </ul>
-                    -->
-                    <br class="clear" />
-                </div>
-            </div>
-        </div>
-        <!-- ####################################################################################################### -->
-        <div class="wrapper col4">
-            <div id="footer">
-                <div class="box1">
-                    <h2>A Little Company Information !</h2>
-                    <img class="imgl" src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/imgl.gif" alt="" />
-                    <p><?php $this->widgetOutput('sidebarPosition'); ?></p>
-                </div>
-                <div class="box contactdetails">
-                    <h2>Our Contact Details !</h2>
-                    <ul>
-                        <li>Company Name</li>
-                        <li>Street Name &amp; Number</li>
-                        <li>Town</li>
-                        <li>Postcode/Zip</li>
-                        <li>Tel: xxxxx xxxxxxxxxx</li>
-                        <li>Fax: xxxxx xxxxxxxxxx</li>
-                        <li>Email: info@domain.com</li>
-                        <li class="last">LinkedIn: <a href="#">Company Profile</a></li>
-                    </ul>
-                </div>
-                <div class="box flickrbox">
-                    <h2>Latest Flickr Images !</h2>
-                    <div class="wrap">
-                        <div class="fix"></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image1"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image2"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image3"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image4"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image5"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="flickr_badge_image" id="flickr_badge_image6"><a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/demo/80x80.gif" alt="" /></a></div>
-                        <div class="fix"></div>
+    <body>
+        <div class="main">
+            <div class="header">
+                <div class="header_resize">
+                    <div class="logo">
+                        <h1><a href="index.php"><span><?php $this->widgetOutput('logoPosition'); ?></span> <small>put your slogan here</small></a></h1>
                     </div>
+                    <nav>
+                        <div class="menu_nav">
+                            <?php
+                            $menu = $this->generateMenu();
+                            echo $menu->asUl(['class' => '']);
+                            ?>
+                        </div>
+                    </nav>
                 </div>
-                <br class="clear" />
             </div>
-        </div>
-        <!-- ####################################################################################################### -->
-        <div class="wrapper col5">
-            <div id="copyright">
-                <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Domain Name</a></p>
-                <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
-                <br class="clear" />
+            <div class="content">
+                <div class="content_resize">
+                    <div class="mainbar">
+                        <?php echo $this->appOutput(); ?>
+                        <!--
+                        <div class="article">
+                            <p class="date">aug<span>28</span></p>
+                            <h2><span>Template License</span></h2>
+                            <p>Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+                            <img src="<?php echo $this->getCurrentTemplatePath(); ?>images/img1.jpg" width="605" height="197" alt="" />
+                            <p>This is a free CSS website template by FreeWebsiteTemplateZ.com. This work is distributed under the Creative Commons Attribution 3.0 License, which means that you are free to use it for any personal or commercial purpose provided you credit me in the form of a link back to FreeWebsiteTemplateZ.com.</p>
+                            <p class="spec"><a href="#" class="rm">Read more</a> &nbsp;||&nbsp; <a href="#" class="com">Comments (3)</a></p>
+                        </div>
+                        <div class="article">
+                            <p class="date">aug<span>27</span></p>
+                            <h2><span>Lorem Ipsum</span> Dolor Sit</h2>
+                            <p>Posted by <a href="#">Owner</a> &nbsp;|&nbsp; Filed under <a href="#">templates</a>, <a href="#">internet</a></p>
+                            <img src="<?php echo $this->getCurrentTemplatePath(); ?>images/img2.jpg" width="605" height="197" alt="" />
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.</a> Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, lorem tellus eleifend magna, eget fringilla velit magna id neque. Curabitur vel urna. In tristique orci porttitor ipsum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam.</p>
+                            <p>Aenean commodo elit ac ante dignissim iaculis sit amet non velit. Donec magna sapien, molestie sit amet faucibus sit amet, fringilla in urna. Aliquam erat volutpat. Fusce a dui est. Sed in volutpat elit. Nam odio tortor, pulvinar non scelerisque in, eleifend nec nunc. Sed pretium, massa sed dictum dapibus, nibh purus posuere magna, ac porta felis lectus ut neque. Nullam sagittis ante vitae velit facilisis lacinia. Cras vehicula lacinia ornare. Duis et cursus risus. Curabitur consectetur justo sit amet odio viverra vel iaculis odio gravida. Ut imperdiet metus nec erat.</p>
+                            <p class="spec"><a href="#" class="rm">Read more</a> &nbsp;||&nbsp; <a href="#" class="com">Comments (7)</a></p>
+                        </div>
+                        <p class="pages"><small>Page 1 of 2 &nbsp;&nbsp;&nbsp;</small> <span>1</span> <a href="#">2</a> <a href="#">&raquo;</a></p>
+                        -->
+                    </div>
+                    <div class="sidebar">
+                        <div class="searchform">
+                            <form id="formsearch" name="formsearch" method="post" action="#">
+                                <span>
+                                    <input name="editbox_search" class="editbox_search" id="editbox_search" maxlength="80" value="Search our ste:" type="text" />
+                                </span>
+                                <input name="button_search" src="<?php echo $this->getCurrentTemplatePath(); ?>images/search_btn.gif" class="button_search" type="image" />
+                            </form>
+                        </div>
+                        <div class="gadget">
+                            <h2 class="star"><span>Sidebar</span> Menu</h2>
+                            <div class="clr"></div>
+                            <ul class="sb_menu">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">TemplateInfo</a></li>
+                                <li><a href="#">Style Demo</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Archives</a></li>
+                            </ul>
+                        </div>
+                        <div class="gadget">
+                            <h2 class="star"><span>Twitter</span></h2>
+                            <div class="clr"></div>
+                            <?php $this->widgetOutput('sidebarPosition'); ?>
+                        </div>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="fbg">
+                <div class="fbg_resize">
+                    <div class="col c1">
+                        <h2><span>Image Gallery</span></h2>
+                        <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix1.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix2.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix3.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix4.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix5.jpg" width="58" height="58" alt="" /></a> <a href="#"><img src="<?php echo $this->getCurrentTemplatePath(); ?>images/pix6.jpg" width="58" height="58" alt="" /></a> </div>
+                    <div class="col c2">
+                        <h2><span>Lorem Ipsum</span></h2>
+                        <p>Lorem ipsum dolor<br />
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. <a href="#">Morbi tincidunt, orci ac convallis aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum, dui pede condimentum odio, ac blandit ante orci ut diam.</p>
+                    </div>
+                    <div class="col c3">
+                        <h2><span>About</span></h2>
+                        <img src="<?php echo $this->getCurrentTemplatePath(); ?>images/white.jpg" width="56" height="56" alt="" />
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo. llorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec placerat bibendum. <a href="#">Learn more...</a></p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_resize">
+                    <p class="lf">Copyright &copy; <a href="#">Domain Name</a>. All Rights Reserved</p>
+                    <p class="rf">Design by <a target="_blank" href="http://www.freewebsitetemplatez.com/">FreeWebsiteTemplatez</a></p>
+                    <div class="clr"></div>
+                </div>
             </div>
         </div>
     </body>
+    <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/cufon-yui.js"></script>
+    <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/arial.js"></script>
+    <script type="text/javascript" src="<?php echo $this->getCurrentTemplatePath(); ?>js/cuf_run.js"></script>
 </html>
