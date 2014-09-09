@@ -87,8 +87,8 @@ class TemplateFunctions extends Base {
             $menu->add('Home', 'index.php');
             $about = $menu->add('Profile', 'profile.php');
 
-            $t = $about->add('Change Password', '#');
-            $about->add('Update Info', '');
+            $t = $about->add('Change Password', '?app=UserMGMT&task=chPassword');
+            $about->add('Update Info', '?app=UserMGMT&task=editUser');
             $about->add('Logout', '?app=UserMGMT&task=logout');
         } else {
             $menu->add('Home', 'index.php');

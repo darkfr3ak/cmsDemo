@@ -33,7 +33,7 @@ $GLOBALS['config'] = array(
         'host' => '127.0.0.1',
         'username' => 'root',
         'password' => 'root',
-        'db' => 'reg'
+        'db' => 'm2'
     ),
     'remember' => array(
         'cookie_name' => 'hash',

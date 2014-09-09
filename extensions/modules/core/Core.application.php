@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -25,9 +26,15 @@
  */
 class CoreApplication extends Application {
 
+    private $_db;
+
     public function display() {
-        echo 'here view content functionality will takes place';
-        echo $this->site_root;
+        $this->_db = DB::getInstance();
+
+        $data = $this->_db->get('articles', array("article_id", '=', "1"));
+        echo "<pre>";
+        print_r($data->first()->article_title);
+        echo "</pre>";
     }
 
 }

@@ -7,10 +7,10 @@ class Input {
     public static function exists($type = 'post') {
         switch ($type) {
             case 'post':
-                return (!empty($_POST)) ? true : false;
+                return (!empty(HTTP::$POST)) ? true : false;
                 break;
             case 'get':
-                return (!empty($_GET)) ? true : false;
+                return (!empty(HTTP::$GET)) ? true : false;
                 break;
             default:
                 return false;
@@ -19,10 +19,10 @@ class Input {
     }
 
     public static function get($item) {
-        if (isset($_POST[$item])) {
-            return $_POST[$item];
-        } else if ($_GET[$item]) {
-            return $_GET[$item];
+        if (isset(HTTP::$POST[$item])) {
+            return HTTP::$POST[$item];
+        } else if (HTTP::$GET[$item]) {
+            return HTTP::$GET[$item];
         }
         return '';
     }
